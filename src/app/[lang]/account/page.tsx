@@ -8,8 +8,10 @@ import Toys from '@/components/account_page/Toys';
 import Stickers from '@/components/account_page/Stickers';
 import Albums from '@/components/account_page/Albums';
 
-export default async function Page({ params }: { params: { lang: string } }) {
-  // const dict = await getDictionary(params.lang);
+type TParams = Promise<{ lang: string }>;
+
+export default async function Page(props: { params: TParams }) {
+  const params = await props.params;
 
   return (
     <div className="box py-[40px] px-[83px]">
