@@ -11,15 +11,6 @@
   color: red
 }
 
-@font-face {
-  font-family: "CopperplateBold";
-  src: url("/fonts/Copperplate.ttc") format("ttc");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-  color: red
-}
-
 @layer base {
   html {
     @apply scroll-smooth;
@@ -59,14 +50,6 @@
     border-color: #875273;
     /* border-image-source: linear-gradient(90deg, #634357 0%, #94577D 50%, #634357 100%);;
     border-image-slice: 1; */
-  }
-
-  .font-montserrat {
-    font-family: Montserrat; 
-  }
-
-  .font-copperplate {
-    font-family: CopperplateBold;
   }
 
   .font-montserrat {
