@@ -18,7 +18,7 @@ type Props = {
 };
 
 export default function Table({ toys, className }: Props) {
-  const ToyFragment = ({ img, title, alt, id, index }: TToy & { index: number }) => (
+  const ToyFragment = ({ title, index }: TToy & { index: number }) => (
     <div className="relative w-[203px] h-full ">
       {/* toy card, including title */}
       <div className="relative w-[203px] h-[203px] ">

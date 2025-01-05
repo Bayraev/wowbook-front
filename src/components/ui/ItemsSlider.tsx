@@ -57,7 +57,7 @@ const InventorySlider = ({ item, type }: Props) => {
     </div>
   );
 
-  const StickerItem = ({ image, title }: TSticker) => (
+  const StickerItem = ({ title }: TSticker) => (
     <div className="relative flex justify-center flex-shrink-0 w-[203px] h-[210px] ml-[38px] ">
       <Image
         src={starStickerSvg as string}
@@ -70,7 +70,7 @@ const InventorySlider = ({ item, type }: Props) => {
     </div>
   );
 
-  const AlbumItem = ({ image, title }: TSticker) => (
+  const AlbumItem = ({ title }: TSticker) => (
     <div className="relative flex justify-center flex-shrink-0 w-[230px] h-[254px] ml-[20px] ">
       <Image
         src={AlbumImageSvg as string}
