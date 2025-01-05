@@ -1,0 +1,45 @@
+name: Prod deploy
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+jobs:
+  send_to_server:
+    name: Send to Server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: unnecessary
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+
+      - name: Send with rsync
+        run: rsync -avz -e "ssh -p 22"  ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST}}:/opt/wow_marketplace/"
+      - name: Build container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: 22
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/wow_marketplace
+            chmod 777 build_next.sh
+            ./build_next.sh
+      - name: Update
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: 22
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            docker service update prod_wow_market_next_app --force

@@ -1,0 +1,37 @@
+{
+  "Navigation": {
+    "newItems": "Novelty",
+    "popular": "Popular",
+    "literaryWorlds": "All literary worlds",
+    "loginAcount": "Login account"
+  },
+  "PopularSection": {
+    "popular": "Popular"
+  },
+  "News": {
+    "newbts": "Novelty"
+  },
+  "About": {
+    "detailBtn": "All literary worlds",
+    "sliderTitle": "Literary worlds?",
+    "download": "Download",
+    "downloadSlideTitle": "We give writers the opportunity to create art objects based on their literary universes!",
+    "downloadSlideDesc": "Figures to decorate your bookshelf, cards for your literary albums - all these art objects you can use in the WoW Books app. Bla bla bla bla Bla bla bla bla Bla bla. Download please brother.",
+    "slide1Title": "We give writers the opportunity to create art objects based on their literary universes!",
+    "slide1Desc": "Figures to decorate your bookshelf, cards for your literary albums - all these art objects you can use in the WoW Books app and increase your earnings in litcoins. You could say that this is “merch” for book worlds, only tokenized on the blockchain and having, in addition to collectible, also a practical application."
+  },
+  "Footer": {
+    "chat": "Telegram chat",
+    "chorme": "About Us",
+    "center": "© 2024 • World of Words All rights reserved",
+    "policy": "Privacy Policy",
+    "offer": "Public offer",
+    "contacts": "Contacts"
+  },
+  "Profile": {
+    "exchange": "Set balance",
+    "quit": "Quit",
+    "leetcoin": "leetcoin balance:",
+    "usdt": "USDT:"
+  }
+}

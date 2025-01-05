@@ -1,0 +1,2 @@
+для деплоя команда:
+docker stack deploy -c docker-compose.yaml prod_wow_market

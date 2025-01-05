@@ -1,0 +1,69 @@
+.btn_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 3.5px;
+  gap: 13px;
+
+  height: 48px;
+
+  background: #271220;
+  border: 1.5px solid #513748;
+  border-radius: 35px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.btn_icon {
+  /* Icon Buttons */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+
+  width: 38px;
+  height: 38px;
+
+  background: linear-gradient(180deg, #7a4d6a 0%, #4f2d44 100%);
+  border: 1.5px solid #714a63;
+  border-radius: 50px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.btn_text {
+  /* Button */
+
+  height: 20px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 16px;
+  /* identical to box height */
+  text-align: center;
+
+  background: linear-gradient(180deg, #f1c4e2 0%, #af809f 100%), #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

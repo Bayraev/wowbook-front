@@ -1,0 +1,31 @@
+1 - верстка
+
+создал компонент Line.tsx
+
+создал инфокарточки
+
+
+Arrow убрал обязательный онклик, добавил класснейм кастомный
+
+Board теперь компонент который наследует компоненты/элементы
+
+Есть карусель борд (мб сделать)
+
+
+toys rendering
+{toys.map((toy: TToy, index: number) => {
+                  if (index > 0) {
+                    return null;
+                  }
+                  return (
+                    <div key={toy.id} className="relative w-[203px] h-full ">
+                      {/* toy card, including title */}
+                      <div className="relative w-[203px] h-[203px] ">
+                        <Image src={toyShadowSvg} alt="/" className="absolute bottom-0" />
+                        <Image src={toyStarSvg} width={203} alt="/" className=" z-90 " />
+                      </div>
+
+                      <div className="absolute bottom-0 w-[203px] h-[35px] "></div>
+                    </div>
+                  );
+                })}
