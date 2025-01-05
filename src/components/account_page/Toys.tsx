@@ -95,7 +95,9 @@ export default function Toys() {
       <div className="relative flex justify-center size-full">
         {/* all content  */}
         <Image className="absolute z-0 top-[-150px]" src={lightSvg} alt="/" />
-        <Board children={<Wrapper />} isExtended={toys.length > 5 && true} />
+        <Board isExtended={toys.length > 5 && true}>
+          <Wrapper />
+        </Board>
       </div>
     </div>
   );

@@ -49,11 +49,9 @@ export default function Stickers() {
         {/* all content  */}
         <Image className="absolute z-0 top-[-150px]" src={lightSvg} alt="/" />
         {/* slider */}
-        <Board
-          height={stickers.length === 10 ? null : '270px'}
-          isExtended={stickers.length === 10}
-          children={<InventorySlider type={{ type: 'Stickers', item: stickers }} item={stickers} />}
-        />
+        <Board height={stickers.length === 10 ? null : '270px'} isExtended={stickers.length === 10}>
+          <InventorySlider type={{ type: 'Stickers', item: stickers }} item={stickers} />
+        </Board>
       </div>
     </div>
   );

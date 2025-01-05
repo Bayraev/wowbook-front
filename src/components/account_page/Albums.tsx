@@ -64,9 +64,9 @@ export default function Albums() {
         <Board
           height={albums.length === 10 ? null : '298px'}
           isExtended={albums.length === 10}
-          children={<InventorySlider type={{ type: 'Albums', item: albums }} item={albums} />}
-          style={{ paddingInline: '0px' }}
-        />
+          style={{ paddingInline: '0px' }}>
+          <InventorySlider type={{ type: 'Albums', item: albums }} item={albums} />
+        </Board>
       </div>
     </div>
   );

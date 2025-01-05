@@ -41,8 +41,10 @@ export default function Books() {
         {/* slider */}
         <Board
           isExtended={books.length === 10}
-          children={<InventorySlider type={{ type: 'Books', item: books }} item={books} />}
-        />
+          // children={<InventorySlider type={{ type: 'Books', item: books }} item={books} />}
+        >
+          <InventorySlider type={{ type: 'Books', item: books }} item={books} />
+        </Board>
       </div>
     </div>
   );
